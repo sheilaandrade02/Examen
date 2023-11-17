@@ -4,6 +4,7 @@ window.onload = async()=> {
     const btn = document.getElementById("btn_magos");
     const btn_e=document.getElementById("btn_elixir");
     btn.addEventListener('click',handleHTML);
+    btn_e.addEventListener('click',mostrarIngredientes);
 
     async function handleHTML(){
         const wizards = await getAllMagos();
@@ -13,30 +14,29 @@ window.onload = async()=> {
             const newElement = document.createElement('div');
             for(const elixir of wizard.elixirs){
                 
-                newElement.innerHTML= (`beforebegin`,`
+                newElement.innerHTML= (`
                 <h2>${wizard.lastName}</h2> 
                 <p>${elixir.name}</p>`)
-                wrapper.appendChild(newElement);
-                
-               
+                wrapper.appendChild(newElement); 
             }
            
         }
     }
 
-    btn_e.addEventListener('click',mostrarIngredientes);
     async function mostrarIngredientes(){
         const elixirs=await getAllIngredients();
-        const texto= document.getElementById('wrapper_elixir');
+        const wrapper= document.getElementById('wrapper_elixir');
 
         for(const elixir of elixirs){
             const newElement = document.createElement('div');
-            for(const ingredient of elixirs.ingredients){
+            
+             for(const ingredient of elixirs.ingredients){
                 newElement.innerHTML = (`
                 <h2>${elixir.name}</h2>
                 <p>${ingredient.name}</p>`)
-                texto.appendChild(newElement);
-            }
+                wrapper.appendChild(newElement);
+                debugger
+             }
         }
     }
 
