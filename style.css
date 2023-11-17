@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+ :root{
+    background: linear-gradient(135deg, #f57a517e 0%, #477eb398 100%);
+    --color-primary:#bcb449;
+    --color-secondary:#764ba2;
+    --boton-pading:20px 40px;
+ }
+
+ body{
+    font-family: 'Poppins' sans-serif;
+ }
+
+ .container{
+    width: 80%;
+    margin-top: 0 auto;
+    text-align: justify;
+    overflow: hidden;
+    padding:80px 0;
+    max-width: 1200px;
+ }
+
+ .subtitle{
+    color:var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.hero{
+    height: 100vh;
+    background-image: var(--background),url(Imagenes/coffee_winter.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;
+    background-position: center;
+    position: relative;
+}
+
+ .nav_items{
+    /* width: 2rem; */
+    max-width: max-content;
+    height: 15px;
+    color: var(--color-primary);
+
+ }

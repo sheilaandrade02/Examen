@@ -19,8 +19,9 @@
           <a href="#about" class="nav_items">¿Que es?</a>
           <a href="#houses" class="nav_items">Houses</a>
           <a href="#wizards" class="nav_items">Wizards</a>
+          <a href="#registro" class="nav_items">Para Registrarse</a>
         </nav>
-        <section class="hero_container">
+        <section class="hero_container" id="inicio">
           <div class="hero_txt">
             <h1 class="hero_title">Bienvenido a Hogwards</h1>
             <h2 class="hero_subtitle">Escuela de Magos</h2>
@@ -69,7 +70,7 @@
             laudantium porro nemo?
           </p>
     
-          <a href="apiWizards.html" class="boton" id="boton" type="submit">Mostrar Magos</a> <!-- boton para get wizards -->
+         
         </div>
 
         <figure class="about_img">
@@ -90,7 +91,8 @@
                 Voluptates aperiam molestias, neque dicta rerum modi,
                  assumenda commodi est laborum, id perspiciatis eius
             </p>
-            <button class="btn_magos" id="btn-magos"></button>
+        
+            <a class="btn_magos" id="btn-magos" type="submit">Mostrar Magos</a> <!-- boton para get wizards -->
             <section class="wrapper_magos">
                 <h2>Lista de Los Magos</h2>
             </section>
@@ -98,11 +100,36 @@
 
 
 
+
+
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+            <div class="container footer_grid">
+                <nav class="nav nav--footer">
+                    <a id="#inicio" class="nav_items nav_items--footer">Inicio</a>
+                    <a class="nav_items nav_items--footer">Sobre Hogwards</a>
+                    <a class="nav_items nav_items--footer">Houses</a>
+                    <a class="nav_items nav_items--footer">Magos</a>
+                </nav>
+                <section class="footer_contact" id="registro">
+                    <h3 class="footer_title">Contacto</h3>
+                    <div class="footer_icons">
+                        <span class="footer_container-icons">
+                            <a href="#" class="fab fa-whatsapp footer_icon"></a>
+                        </span>
+                        <span class="footer_container-icons">
+                            <a href="#" class="fab fa-facebook-f footer_icon"></a>
+                        </span>
+                        <span class="footer_container-icons">
+                            <a href="#" class="fab fa-twitter footer_icon"></a>
+                        </span>
+                    </div>
+                </section>
+            </div>
+        </footer>
 
-    </footer>
+        
   </body>
 </html>
