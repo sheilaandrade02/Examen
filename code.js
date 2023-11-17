@@ -6,29 +6,32 @@ window.onload = async()=> {
     const wrapper = document.getElementById('wrapper_magos');
         
 
-        for (const wizard of wizards ) {
+        //for (const wizard of wizards ) {
             const newElement = document.createElement('div');
-    //<h2>${wizard.firstName}</h2>
+            
+    
             newElement.innerHTML = `
              
-              <p>${wizard.lastName}</p>
+              <p>${wizards.lastName}</p>
             `;
 
             wrapper.appendChild(newElement);
 
             // console.log(wrapper);
-        }
+       // }
 
 }
 
 async function getAllMagos() {
     const response = await fetch(`${SWAPI_BASE_URL}/wizards`);
-    const data = await response.json();
-    for(response of stringArray.len){
-        
-        console.log(data.lastName);
-        return data.lastName;
+    
+    for(let i =0; i<response; i++){
+        const data = await response.json();
+        console.log(data);
+        return data[i];
     }
+        
+
    // console.log(data.elixirs);
  //   return data.;
 
