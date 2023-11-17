@@ -42,3 +42,18 @@
     color: var(--color-primary);
 
  }
+
+ .btn_magos{
+
+    display: flex;
+    width: max-content;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2rem;
+    margin: 3cm auto;
+    background-color: var(--color-secondary);
+    color: white;
+    border-radius: 8cm;
+    cursor: pointer;
+    
+ }
