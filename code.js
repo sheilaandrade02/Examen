@@ -3,25 +3,25 @@ const SWAPI_BASE_URL = 'https://wizard-world-api.herokuapp.com';
 window.onload = async()=> {
     const btn = document.getElementById("btn_magos");
     const btn_e=document.getElementById("btn_elixir");
-    btn.addEventListener('click',handleHTML);
+   // btn.addEventListener('click',handleHTML);
     btn_e.addEventListener('click',mostrarIngredientes);
 
-    async function handleHTML(){
-        const wizards = await getAllMagos();
-        const wrapper = document.getElementById('wrapper_magos');
+    // async function handleHTML(){
+    //     const wizards = await getAllMagos();
+    //     const wrapper = document.getElementById('wrapper_magos');
 
-        for (const wizard of wizards ) {  
-            const newElement = document.createElement('div');
-            for(const elixir of wizard.elixirs){
+    //     for (const wizard of wizards ) {  
+    //         const newElement = document.createElement('div');
+    //         for(const elixir of wizard.elixirs){
                 
-                newElement.innerHTML= (`
-                <h2>${wizard.lastName}</h2> 
-                <p>${elixir.name}</p>`)
-                wrapper.appendChild(newElement); 
-            }
+    //             newElement.innerHTML= (`
+    //             <h2>${wizard.lastName}</h2> 
+    //             <p>${elixir.name}</p>`)
+    //             wrapper.appendChild(newElement); 
+    //         }
            
-        }
-    }
+    //     }
+    // }
 
     async function mostrarIngredientes(){
         const elixirs=await getAllIngredients();
@@ -35,7 +35,7 @@ window.onload = async()=> {
                 <h2>${elixir.name}</h2>
                 <p>${ingredient.name}</p>`)
                 wrapper.appendChild(newElement);
-                debugger
+                
              }
         }
     }
