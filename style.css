@@ -85,11 +85,11 @@
    height: 70px;
    align-items: center;
    font-weight: 700;
-   width: auto;
+   width: 4cm auto;
 }
 
  .nav_items{
-    width: 2rem; 
+    width: 4rem; 
     max-width: max-content;
     height: 15px;
     color: white;
