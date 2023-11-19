@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
  :root{
-    background: linear-gradient(135deg, #e6734d7e 0%, #477eb398 100%);
-    --color-primary:rgb(73, 188, 81);
-    --color-secondary:#764ba2;
+    --background: linear-gradient(95deg, rgba(217, 198, 226, 0.583) 0%, #ede9c19d 100%);
+    --color-primary:rgb(200, 66, 56);
+    --color-secondary: rgb(180, 102, 80);
     --boton-pading:20px 40px;
  }
 
  body{
-    font-family: 'Poppins' sans-serif;
-    
+    font-family: 'Poppins', sans-serif;
  }
 
  .container{
@@ -29,12 +28,56 @@
 
 .hero{
     height: 100vh;
-    background-image: var(--background),url(Imagenes/coffee_winter.jpeg);
+    background-image: var(--background),url(Imagenes/_.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:fixed ;
     background-position: center;
     position: relative;
+}
+
+.hero .container{
+   padding: 0;
+
+}
+.hero_container{
+   display: flex;
+   height: calc(100vh - 70px);
+   align-items: center;
+   color: #fff;
+}
+
+.hero_wave{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 220px;
+}
+
+.hero_txt{
+   width: 80%;
+   margin-bottom: 50px;
+}
+.hero_title{
+   font-size: 2cm;
+   color: var(--color-primary);
+}
+
+.hero_subtitle{
+   font-size:2rem;
+   font-weight: 300;
+   margin: 15px 0;
+}
+
+.hero_cta{
+   display: inline-block;
+   background: #fff; 
+   padding: var(--boton-pading);
+   color:var(--color-primary);
+   text-decoration: none;
+   border-radius: 40px;
+
 }
 
  .nav_items{
@@ -44,19 +87,149 @@
     color: var(--color-primary);
 
  }
+ .presentation{
+   padding-top: 0;
+   text-align: center;
+}
 
- .btn_magos{
+.presentation_picture{
+   width: 250px;
+   height: 250px;
+   border-radius: 80%;  /*para que sea circular*/
+   margin-bottom: 10px;
+   object-fit: cover;
+   object-position: top;
+}
 
-    display: flex;
-    width: max-content;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 2rem;
-    margin: 3cm auto;
-    background-color: var(--color-secondary);
-    color: white;
-    border-radius: 8cm;
-    cursor: pointer;
+.presentation_copy{
+   width: 80%;
+   margin: 0 auto;
+}
+
+.presentation_cta{
+   margin-top: 30px;
+   display: inline-block;
+   background: var(--color-primary);
+   color: #fff;
+   text-decoration: none;
+   padding: var(--boton-pading);
+   border-radius: 40px;
+}
+.about{
+   min-height: 400px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   row-gap: 80px;
+   justify-items: center;
+   align-items: center;
+}
+
+.about_img{
+   text-align: center;
+}
+
+.about_img--left{
+   text-align: left;
+}
+.about_picture{
+   max-width: 80%;
+   border-radius: 10px;
+}
+
+.about_paragraph{
+   margin-bottom: 20px;
+   line-height: 1.5;
+   font-weight: 300;
+}
+
+
+.hechizosTexto{
+   display:flex;
+   flex-wrap: wrap;
+   text-align: center;
+   justify-content: space-around;
+   
+}
+p.textoH{
+   text-justify: auto;
+   align-items: center;
+}
+.nox_btn{
+   width: max-content;
+   font-weight: bold;
+   font-size: 20px;
+   padding: 1rem;
+   margin: 0.5cm auto;
+   background-color: #4b4b47;
+   color: white;
+   border-radius: 5cm;
+   cursor:grab;
+}
+.lumos_btn{ 
+   width: max-content;
+   font-weight: bold;
+   font-size: 20px;
+   padding: 1rem;
+   margin: 0.5cm auto;
+   background-color: #d4c51d;
+   color: white;
+   border-radius: 5cm;
+   cursor:grab;
+}
+
+.water_btn{
+   width: max-content;
+   font-weight: bold;
+   font-size: 20px;
+   padding: 1rem;
+   margin: 0.5cm auto;
+   background-color: #3683cf;
+   color: white;
+   border-radius: 5cm;
+   cursor:grab;
+
+}
+h4.titulo{
+   color:rgb(112, 110, 110);
+   font-size: 1.5rem;
+   margin-bottom: 35px;
+
+}
+h5.titulo{
+   color:rgb(115, 133, 150);
+   font-size: 1.2rem;
+   margin-bottom: 35px;
+  
+}
+
+h2.tituloC{
+   background-color:rgba(138, 128, 143, 0.721);
+   color:white;
+   display: inline-block;
+   border-radius: 10px;
+}
+h4.textoC{
+   background-color: rgba(245, 245, 220, 0.55);
+
+}
+p.textoCN{
+   background-color:  rgba(245, 245, 220, 0.55);
+   border-radius: 5px;
+   display: inline-block;
+   font-size: large;
+}
+.btn_magos{
+
+   display: flex;
+   width: max-content;
+   font-weight: bold;
+   font-size: 20px;
+   padding: 2rem;
+   margin: 3cm auto;
+   background-color: var(--color-secondary);
+   color: white;
+   border-radius: 8cm;
+   cursor: pointer;
     
  }
  .btn_elixir{
@@ -75,7 +248,7 @@
  }
 
  .escudos_grid{
-    width: 100%;
+    width: 80%;
     display: grid;
     grid-template-columns:2fr 2fr;
     gap: 10px;
@@ -84,44 +257,36 @@
  }
 
  .escudos_info1{
-    position: relative;
-    background-image: url(Imagenes/gryffindor.jpeg) ;
-    background-position: center;
-    background-size: auto 100%;
-    max-width: 80%; 
-    height: 100%;
-    overflow: hidden;
+   position: center;
+    background-image:url(Imagenes/gryffindor.jpeg) ;
+    background-size: auto 80%;
+    background-repeat:repeat-x;
+    width:80%;
+    
+  
  }
  .escudos_info2{
-    position: relative;
     background-image: url(Imagenes/ravenclaw.jpeg) ;
-    background-position: center;
-    background-size: auto 100%;
-    max-width: 80%; 
-    height: 100%;
-    overflow: hidden;
+    background-size: auto 80%;
+    background-repeat:repeat-x;
+    width:80%;
+
  }
 
  .escudos_info3{
     position: relative;
     background-image: url(Imagenes/hufflepuff.jpeg) ;
-    background-position: center;
-    background-size:auto 100%;
-    max-width: 80%; 
-    height: 100%;
-    overflow: hidden;
+    background-size: auto 80%;
+    background-repeat:repeat-x;
+    width:80%;
  
  }
 
  .escudos_info4{
-    position: relative;
     background: url(Imagenes/slytherin.jpeg);
-    background-position: center;
-    background-size:auto 100%;
-    max-width: 80%; 
-    height: 100%;
-    overflow: hidden;
- 
+    background-size: auto 80%;
+    background-repeat:repeat-x;
+    width:80%;
  
  }
  .escudo_img{
@@ -130,21 +295,48 @@
     object-fit: cover;
     cursor:pointer
  }
+ .open_btn_fav{
+   display:inherit;
+   width: max-content;
+   font-weight: bold;
+   font-size: 20px;
+   padding: 1rem;
+   margin: 1cm auto;
+   background-color:var(--color-secondary);
+   color: white;
+   border-radius: 5cm;
+   cursor:grab;
+
+ }
 
 .ventanaFlotante{
     display:none;
     position: fixed;
     top:30%;
-    left: 70%;
-    transform: translate(-50%,-50%);
-    box-shadow: inset 0 0 0 1000px rgba(105, 18, 162, 0.5);
+    left: 85%;
+    transform: translate(-30%,-50%);
+    box-shadow: inset 0 0 0 1000px rgba(233, 192, 192, 0.5);
     background: #fff;
     padding: 1rem;
     border-radius: 10px;
 }
-
+.contendorVentana{
+   position: relative;
+   height: 200px; 
+   border: 1px solid #ccc; 
+   margin-bottom: 20px; 
+}
 .ventanaFlotante.active{
     display:block;
+}
+.testVentana{
+   display:flex;
+   position:inherit;
+   background: #fff;
+   padding: 1rem;
+}
+.testVentana.active{
+   display:block;
 }
 
 @media screen and (maxWidth: 768px){

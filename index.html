@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="hero">
       <div class="container">
         <nav class="nav">
           <a href="#about" class="nav_items">¿Que es?</a>
@@ -31,26 +31,15 @@
       </div>
 
       <div class="hero_wave" style="overflow: hidden">
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          style="height: 100%; width: 100%"
-        >
-          <path
-            d="M0.00,49.98 C150.00,150.00 349.20,-50.00  500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-            style="stroke: none; fill: #fff"
-          ></path>
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%">
+          <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00  500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #fff"></path>
         </svg>
       </div>
-
-      <section class="peticiones" id="peticiones">
-        <span id="spinner" class="loader"></span>
-      </section>
     </header>
-
     <main>
-      <section class="presetacion container">
-        <img src="" class="presentation_picture" />
+      <section class="presentation container">
+        <img src="Imagenes/minerva.jpeg" class="presentation_picture" />
         <h2 class="subtitle">Profesora McGonegal</h2>
         <p class="presentation_txt">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
@@ -72,70 +61,75 @@
         </div>
 
         <figure class="about_img">
-          <img src="" class="about_picture" />
+          <img src="Imagenes/dumbledor.jpeg" class="about_picture" />
         </figure>
         <figure class="about_img about_img--left">
-          <img src="" class="about_picture" />
+          <img src="Imagenes/snpae.jpeg" class="about_picture" />
         </figure>
-        <figure class="about_img about_img--right">
-          <img src="" class="about_picture" />
-        </figure>
-
         <div class="about_txt">
-          <h2 class="subtitle">Houses</h2>
-          <p class="about_paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dicta
-            laborum, ab velit reprehenderit doloremque aut. Voluptates aperiam
-            molestias, neque dicta rerum modi, assumenda commodi est laborum, id
-            perspiciatis eius
-          </p>
-          <!-- <a class="btn_magos" id="btn_magos" type="submit">Mostrar Magos</a> -->
+          <h2 class="subtitle">Hechizo</h2>  
+          <p class="hechizosTexto" id="hechizos"></p>
+          <button class="nox_btn" id="nox_btn">EXTINGUISHING CHARM</button>
+          <button class="lumos_btn" id="lumos_btn">LIGHTING CHARM</button>
+          <button class="water_btn" id="water_btn">WATER SPELL</button>
         </div>
       </section>
+      
+        
+      
+      
       <button class="open_btn_fav" id="open_btn_fav">Abrir Favoritos</button>
       <section id="ventanaFlotante" class="ventanaFlotante">
-        <h2>-FAVOURITE HOUSE & WIZARD-</h2>
+        <h2 class="subtitle">-FAVOURITE HOUSE & WIZARD-</h2>
         <div id="txt_wizard"></div>
         <div id="txt_house"></div>
         <button id="close_btn_fav">Cerrar</button>
       </section>
       <section class="wrapper_magos" id="wrapper_magos">
-        <h2>Lista de Los Magos</h2>
+        <h2 class="subtitle">Lista de Los Magos</h2>
         <!-- aqui creo div de magos con elixir y boton de ingredientes -->
       </section>
 
-      <h2>Mi personaje favorito</h2>
+      <h2 class="subtitle">Mi personaje favorito</h2>
       <ul id="lista_personajes"></ul>
 
       <div class="escudos_grid">
-        <article class="escudos_info1" id="escudos_info1">
+        <section class="escudos_info1" id="escudos_info1">
           <figure class="escudo">
             <figcaption class="escudo_name"></figcaption>
           </figure>
-        </article>
+        </section>
 
-        <article class="escudos_info2" id="escudos_info2">
+        <section class="escudos_info2" id="escudos_info2">
           <figure class="escudo">
             <figcaption class="escudo_name"></figcaption>
           </figure>
-        </article>
+        </section>
 
-        <article class="escudos_info3" id="escudos_info3">
+        <section class="escudos_info3" id="escudos_info3">
           <figure class="escudo">
             <figcaption class="escudo_name"></figcaption>
           </figure>
-        </article>
+        </section>
 
-        <article class="escudos_info4" id="escudos_info4">
+        <section class="escudos_info4" id="escudos_info4">
           <figure class="escudo">
             <figcaption class="escudo_name"></figcaption>
           </figure>
-        </article>
+        </section>
       </div>
 
       <section id="favorito">
-        <h2>Mi Casa Favorita es:</h2>
+        <h2 class="subtitle">Mi Casa Favorita es:</h2>
         <ul id="lista_favoritos"></ul>
+      </section>
+
+      <section class="contendorVentana">
+        <h2 class="subtitle">¿DE QUE CASA ERES?</h2>
+        <!-- <button class="start_test_btn" id="start_test_btn">Empezar</button> -->
+        <section class="testVentana" id="testVentana">
+        <p id="test_txt"></p>
+      </section>
       </section>
     </main>
 
