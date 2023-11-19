@@ -38,7 +38,7 @@
       </div>
     </header>
     <main>
-      <section class="presentation container">
+      <section id="inicio" class="presentation container">
         <img src="Imagenes/minerva.jpeg" class="presentation_picture" />
         <h2 class="subtitle">Profesora McGonegal</h2>
         <p class="presentation_txt">
@@ -86,7 +86,7 @@
         <button id="close_btn_fav">Cerrar</button>
       </section>
       <section class="wrapper_magos" id="wrapper_magos">
-        <h2 class="subtitle">Lista de Los Magos</h2>
+        <h2 id="magos" class="subtitle">Lista de Los Magos</h2>
         <!-- aqui creo div de magos con elixir y boton de ingredientes -->
       </section>
 
@@ -124,22 +124,26 @@
         <ul id="lista_favoritos"></ul>
       </section>
 
-      <section class="contendorVentana">
+      <!-- <section class="contendorVentana">
         <h2 class="subtitle">¿DE QUE CASA ERES?</h2>
-        <!-- <button class="start_test_btn" id="start_test_btn">Empezar</button> -->
-        <section class="testVentana" id="testVentana">
+        <button class="start_test_btn" id="start_test_btn">Empezar</button> -->
+        <!-- <section class="testVentana" id="testVentana">
         <p id="test_txt"></p>
       </section>
-      </section>
+      </section> -->
     </main>
 
     <footer class="footer">
       <div class="container footer_grid">
         <nav class="nav nav--footer">
-          <a id="#inicio" class="nav_items nav_items--footer">Inicio</a>
-          <a class="nav_items nav_items--footer">Sobre Hogwards</a>
-          <a class="nav_items nav_items--footer">Houses</a>
-          <a class="nav_items nav_items--footer">Magos</a>
+          <a href="#inicio" class="nav_items nav_items--footer">
+            Inicio</a>
+          <a href="#about" class="nav_items nav_items--footer">
+            Sobre-Hogwards</a>
+          <a href="#houses" class="nav_items nav_items--footer">
+            Houses</a>
+          <a href="#magos" class="nav_items nav_items--footer">
+            Magos</a>
         </nav>
         <section class="footer_contact" id="registro">
           <h3 class="footer_title">Contacto</h3>
@@ -157,5 +161,6 @@
         </section>
       </div>
     </footer>
+
   </body>
 </html>

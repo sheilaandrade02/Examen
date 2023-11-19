@@ -79,14 +79,33 @@
    border-radius: 40px;
 
 }
+.nav{
+   display: flex;
+   flex-direction: column-reverse;
+   justify-content: flex-end;
+   height: 70px;
+   align-items: center;
+   font-weight: 700;
+}
 
  .nav_items{
-    /* width: 2rem; */
+    width: 2rem; 
     max-width: max-content;
     height: 15px;
-    color: var(--color-primary);
+    color: white;
 
  }
+ .nav_items--cta{
+   border: 1px solid white;
+}
+
+.nav_items--footer{
+   padding: 10px;
+}
+ .nav--footer{
+   font-weight: 300;
+   justify-content: flex-start;
+}
  .presentation{
    padding-top: 0;
    text-align: center;
@@ -174,7 +193,7 @@ p.textoH{
    background-color: #d4c51d;
    color: white;
    border-radius: 5cm;
-   cursor:grab;
+   cursor:pointer;
 }
 
 .water_btn{
@@ -329,15 +348,54 @@ p.textoCN{
 .ventanaFlotante.active{
     display:block;
 }
-.testVentana{
-   display:flex;
-   position:inherit;
-   background: #fff;
-   padding: 1rem;
+
+.footer{
+   background: var(--color-primary);
+   word-spacing: 1.5px;
 }
-.testVentana.active{
-   display:block;
+
+.footer_grid{
+   display: grid;
+   grid-template-columns: 3fr 2fr;
+   gap: 20px;
+   align-items: center;
 }
+
+.footer_title{
+   font-weight:400 ;
+   color: #fff;
+   font-size: 2rem;
+   margin-bottom: 30px;
+   text-align: center;
+}
+
+.footer_icons{
+   display: flex;
+   justify-content: space-evenly;
+
+}
+
+.footer_container-icons{
+   display: inline-block;
+   width: 60px;
+   height: 60px;
+   color: #fff;
+   text-align: center;
+   border: 1px solid #fff;
+   border-radius: 50%;
+}
+
+.footer_icon{
+   color: inherit;
+   font-size: 30px;
+   text-decoration: none;
+}
+
+.fab.footer_icon{
+   line-height: 60px;
+}
+
+
 
 @media screen and (maxWidth: 768px){
     .container{
@@ -367,3 +425,4 @@ p.textoCN{
       }
 
 }
+
