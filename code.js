@@ -111,12 +111,11 @@ window.onload = async () => {
       const traitsElement = document.createElement("div");
       traitsElement.innerHTML = `
               <p class="textoCN"> ${valores.name}</p>
-              <button onclick="mostrarAtributosCasas('${casa.id}')">Seleccionar</button>
+              <button onclick="mostrarAtributos('${valores.name}')">Seleccionar</button>
               `;
       test_txt.appendChild(traitsElement);
     }
   }
-
 
 };
 
@@ -172,21 +171,8 @@ async function mostrarCasaFav(name) {
     ventana.appendChild(housesHTMLElement);
   }
 }
-async function mostrarAtributosCasas(id){
-  const houses= await getAllHouses();
-  const atributoSel = await getAllHouses(id);
-  let selecionado=0;
-  for(const house of houses){
-    for(let i=0; i<house.traits.length; i++){
-      if(onclinck==true &&  house.traits[i]==atributoSel.traits[i]){
-        selecionado++;
-        return house.name;
-        
-      }
-    }
-    console.log(house.name);
-  }
- 
+async function mostrarAtributosCasas(){
+ fro
    
 }
 
@@ -203,12 +189,16 @@ async function getAllIngredientes(id) {
   return data.ingredients; //ya te devuelve un array de ingredientes
 }
 
-async function getAllHouses(id) {
-  const response = await fetch(`${SWAPI_BASE_URL}/houses/${id}`);
+async function getAllHouses() {
+  const response = await fetch(`${SWAPI_BASE_URL}/houses`);
   const data = await response.json();
   return data;
 }
-
+async function getAllHousesTest(traits) {
+  const response = await fetch(`${SWAPI_BASE_URL}/houses/${traits}`);
+  const data = await response.json();
+  return data.traits;
+}
 async function getAllSpells(){
   const response= await fetch(`${SWAPI_BASE_URL}/spells`);
   const data= await response.json();
